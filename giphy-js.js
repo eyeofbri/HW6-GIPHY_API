@@ -230,7 +230,7 @@ function popupWindows(kind, which) {
 		gW.append(gW_GB);
 		
 		if(kind == "button"){
-			addGIPHY(which, gW_GB);
+			addGIF(which, gW_GB);
 		}
 		if(kind == "howTo"){
 			var h = $("<div>");
@@ -245,7 +245,7 @@ function popupWindows(kind, which) {
 		if(kind == "about"){
 			var a = $("<div>");
 			a.addClass("text-about");
-			a.html("This GIPHY Popup Generator was<br>"+
+			a.html("This Popup Generator was<br>"+
 				"created during February 2017<br>"+
 				"for Rutgers Coding Bootcamp by Brian McLedon");
 			gW_GB.append(a);
@@ -276,14 +276,14 @@ function popupWindows(kind, which) {
 }
 
 
-function addGIPHY(search, placeWhere) {
+function addGIF(search, placeWhere) {
 	var s = "q="+search;
 	var limit = "&limit=99";
 	var rating = "";//"&rating=pg-13";
-	var queryURL = "http://api.giphy.com/v1/gifs/search?" + s+ rating + "&api_key=dc6zaTOxFJmzC" + limit ;
+	var queryURL = "https://api.giphy.com/v1/gifs/search?" + s+ rating + "&api_key=dc6zaTOxFJmzC" + limit ;
 	
 	if(search == "trending"){
-		queryURL = "http://api.giphy.com/v1/gifs/trending?" + rating + "api_key=dc6zaTOxFJmzC" + limit;
+		queryURL = "https://api.giphy.com/v1/gifs/trending?" + rating + "api_key=dc6zaTOxFJmzC" + limit;
 	}
 
 	$.ajax({
