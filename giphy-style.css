@@ -9,12 +9,10 @@
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
-
 .hide{
     display: none;
     opacity: 0;
 }
-
 .unclickable{
     pointer-events: none;
     tabindex:"-1";
@@ -25,14 +23,16 @@
 
 
 
+
+
 body{
     width: 100vw;
     height: 100vh;
-    background-color: #0196ba;
-    background-image: url("bg.jpg");
-    background-size: cover;
-    background-position: 0% center;
+    background-color: #000;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAT0lEQVQoU42QMQoAMAgD6+pPnP3/O3xOi0JKcIqTJCdGzd1vRBxUVU27NcvMyxCAHmD4g9voYdYGZGGvhmecERCicAwdlFfjaukY6T3qwx+da1APlYtPogAAAABJRU5ErkJggg==');
 }
+
+
 
 
 
@@ -58,7 +58,12 @@ body{
 #container:not(.container-W-full){
     z-index: 1;
 }
-#fakeTop{
+
+
+
+
+
+#fake-Top{
     display: flex;
     height: 30px;
     color:#fff;
@@ -71,19 +76,19 @@ body{
     background: linear-gradient(to right,  #000283 0%,#1083cf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000283', endColorstr='#1083cf',GradientType=1 ); /* IE6-9 */
 }
-#fakeTop p{
+#fake-Top p{
     margin:0;
     text-shadow: 0 0 2vmin #000;
     cursor: move;
 }
-#fakeTopNav{
+#fake-Top-Nav{
     cursor: move;
     right: 0px;
     position: absolute;
     display: flex;
     height: 20px;
 }
-#fakeTopNav button{
+#fake-Top-Nav button{
     cursor: pointer;
     width: calc(25px - 1vmin);
     margin-right: 1vmin;
@@ -95,12 +100,15 @@ body{
     font-weight: bold;
     padding:0;
 }
-#fakeTopNav button:hover{
+#fake-Top-Nav button:hover{
     background-color: #999;
 }
 
 
-.fakeMainMenu {
+
+
+
+.fake-main-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -116,6 +124,8 @@ body{
 
 
 
+
+
 li a, .dropbtn {
     display: inline-block;
     text-align: center;
@@ -124,21 +134,15 @@ li a, .dropbtn {
     color: #000;
     border: 3px solid transparent;
 }
-
 .dropbtn::first-letter { 
     text-decoration: underline;
-
 }
-
 li a:hover, .dropdown:hover .dropbtn {
     border: 3px inset #a9a9a9;
 }
-
 li.dropdown {
     display: inline-block;
 }
-
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -148,7 +152,6 @@ li.dropdown {
     z-index: 1;
     border: 3px outset #c1c1c1;
 }
-
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -157,17 +160,14 @@ li.dropdown {
     text-align: left;
     transition: background-color .1s ease;
 }
-
 .dropdown-content a:hover {
     background-color: #000283;
     color: #fff;
     border: 3px solid transparent;
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 .dropdown-content a:active {
     background-color: #1083cf;
     color: #fff;
@@ -175,19 +175,20 @@ li.dropdown {
 }
 
 
-.fakeVR{
+
+
+
+.fake-VR{
     height: 25px;
     margin-left: 5px;
     margin-right: 5px;
     border-left: 5px ridge #c1c1c1;
     box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2);
 }
-.buttonHolder .fakeVR{
+.button-holder .fake-VR{
     height: 50px;
 }
-
-
-.buttonHolder {
+.button-holder {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -199,7 +200,7 @@ li.dropdown {
     box-shadow:inset 0 0 9px 1px rgba(0,0,0,0.2);
     display: flex;
 }
-.rowHolder{
+.row-holder{
     width: 100%;
 }
 .row{
@@ -221,7 +222,7 @@ li.dropdown {
 }
 
 
-.fakeMenuForm {
+.fake-menu-form {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -235,14 +236,12 @@ li.dropdown {
     align-items: center;
     height: 40px;
 }
-
-.fakeMenuForm p{
+.fake-menu-form p{
     margin:0;
     padding: 0;
     margin-left: 1vmin;
     cursor: default;
 }
-
 #topic-input{
     width: 60%;
     height:80%;
@@ -253,8 +252,7 @@ li.dropdown {
     padding-left: 10px;
     border-right:0px;
 }
-
-#typeButtons_submit{
+#type-buttons-submit{
     height: 85%;
     width: 50px;
     font-size: 20px;
@@ -275,8 +273,6 @@ li.dropdown {
 #trending:hover{
     background-color: #a6a6a6;
 }
-
-
 .dropdown-content .unclickable{
     color:#ccc !important;
     background-color: #a6a6a6 !important;
@@ -289,12 +285,7 @@ li.dropdown {
 
 
 
-
-
-
-
-
-.gifWindow{
+.gif-window{
     position: absolute;
     width: 320px;
     height: 30px;
@@ -304,14 +295,13 @@ li.dropdown {
     border:5px ridge #dfdfdf;
     box-shadow: 0px 8px 16px 5px rgba(0,0,0,0.2);
 }
-.gifWindow_topNav{
+.gif-window-top-nav{
     width: 100%;
     height: 30px;
     background-color: #656565;
     display: flex;
 }
-
-.gif_Top{
+.gif-top{
     background-color: #656565;
     width: 100%;
     color: #ccc;
@@ -323,11 +313,11 @@ li.dropdown {
     text-align: left;
     border: 0px solid transparent;
 }
-.gif_Top:active, .gif_Top_Active{
+.gif-top:active, .gif-top-active{
     background-color: #000283;
     color: #fff;
 }
-.gif_close {
+.gif-close {
     width: 26px;
     height: 26px;
     background-color: #ccc;
@@ -336,35 +326,51 @@ li.dropdown {
     margin-right: 2px;
     margin-top: 2px;
 }
-.gif_close .gif_Top{
+.gif-close .gif-top{
     background-color: #000283;
 }
-
-.gifButton{
+.gif-button{
     background-color: transparent;
     width: 100%;
     height: calc(100% - 30px);
     border: 0px;
 }
-.gifRating{
+.gif-rating{
     position: absolute;
     bottom: 5px;
     left: 5px;
     font-size: 15px;
     color: #fff;
     text-shadow: -1px -1px 2px #000, 1px -1px 2px #000,
-    -1px 1px 1px #000, 1px 1px 1px #000;
+                -1px 1px 2px #000, 1px 1px 2px #000, 0px 0px 10px #000,
+                -3px -2px 10px #000, 3px -2px 10px #000,
+                -3px 2px 10px #000, 3px 2px 10px #000 ;
     opacity: 0.8;
 }
-
+.gif-info{
+    position: absolute;
+    top: 35px;
+    left: 5px;
+    font-size: 10px;
+    color: #fff;
+    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000,
+                -1px 1px 2px #000, 1px 1px 2px #000, 0px 0px 10px #000,
+                -3px -2px 10px #000, 3px -2px 10px #000,
+                -3px 2px 10px #000, 3px 2px 10px #000 ;
+    opacity: 0.8;
+}
 .text-about{
     font-size: 20px;
 }
 
+
+
+
+
 #footer{
     background-color: #000;
     background-image: url("PoweredBy.gif");
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 30px;
     left: 0px;
