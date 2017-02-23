@@ -1,0 +1,362 @@
+/*///////*/
+/*BEGIN */
+/*RE-USABLE CSS*/
+.no-touch{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.hide{
+    display: none;
+    opacity: 0;
+}
+
+.unclickable{
+    pointer-events: none;
+    tabindex:"-1";
+}
+/*END */
+/*RE-USABLE CSS*/
+/*///////*/
+
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0196ba;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: 0% center;
+}
+
+
+
+#container{
+    position: absolute;
+    left:0px;
+    border:5px ridge #dfdfdf;
+    transition: height .1s ease;
+    background-color: #333;
+    box-shadow: 0px 8px 16px 5px rgba(0,0,0,0.2);
+}
+.container-H-open{
+    top: 0px;
+}
+.container-H-closed{
+    height: 30px;
+    overflow: hidden;
+}
+.container-W-full{
+    width: calc(100vw - 10px);
+    top: 0px;
+}
+#container:not(.container-W-full){
+    z-index: 1;
+}
+#fakeTop{
+    display: flex;
+    height: 30px;
+    color:#fff;
+    font-family: sans-serif;
+    align-items: center;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000283+0,1083cf+100 */
+    background: #000283; /* Old browsers */
+    background: -moz-linear-gradient(left,  #000283 0%, #1083cf 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #000283 0%,#1083cf 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #000283 0%,#1083cf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000283', endColorstr='#1083cf',GradientType=1 ); /* IE6-9 */
+}
+#fakeTop p{
+    margin:0;
+    text-shadow: 0 0 2vmin #000;
+    cursor: move;
+}
+#fakeTopNav{
+    cursor: move;
+    right: 0px;
+    position: absolute;
+    display: flex;
+    height: 20px;
+}
+#fakeTopNav button{
+    cursor: pointer;
+    width: calc(25px - 1vmin);
+    margin-right: 1vmin;
+    background-color: #c1c1c1;
+    text-align: center;
+    align-items: center;
+    color:#000;
+    box-shadow: 0 0 1px 1px #000;
+    font-weight: bold;
+    padding:0;
+}
+#fakeTopNav button:hover{
+    background-color: #999;
+}
+
+
+.fakeMainMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #c1c1c1;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: #000;
+    border: .5vmin outset #ccc;
+    box-shadow:inset 0 0 9px 1px rgba(0,0,0,0.2);
+    display: flex;
+}
+
+
+
+li a, .dropbtn {
+    display: inline-block;
+    text-align: center;
+    padding: 2px 13px;
+    text-decoration: none;
+    color: #000;
+    border: 3px solid transparent;
+}
+
+.dropbtn::first-letter { 
+    text-decoration: underline;
+
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    border: 3px inset #a9a9a9;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #a6a6a6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 3px outset #c1c1c1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color .1s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #000283;
+    color: #fff;
+    border: 3px solid transparent;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:active {
+    background-color: #1083cf;
+    color: #fff;
+    border: 3px solid transparent;
+}
+
+
+.fakeVR{
+    height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-left: 5px ridge #c1c1c1;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2);
+}
+.buttonHolder .fakeVR{
+    height: 50px;
+}
+
+
+.buttonHolder {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #c1c1c1;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: #000;
+    border: .5vmin outset #ccc;
+    box-shadow:inset 0 0 9px 1px rgba(0,0,0,0.2);
+    display: flex;
+}
+.rowHolder{
+    width: 100%;
+}
+.row{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.row button{
+    text-transform: capitalize;
+    flex-grow: 1;
+    background-color: #c1c1c1;
+    font-size: 2.5vmin;
+}
+.row button:hover{
+    background-color: #a6a6a6;
+}
+
+
+.fakeMenuForm {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #c1c1c1;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: #000;
+    border: .5vmin outset #ccc;
+    box-shadow:inset 0 0 9px 1px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.fakeMenuForm p{
+    margin:0;
+    padding: 0;
+    margin-left: 1vmin;
+    cursor: default;
+}
+
+#topic-input{
+    width: 60%;
+    height:80%;
+    margin-left: 2vmin;
+    flex-grow: 1;
+    box-shadow:inset 0 0 3px 1px rgba(0,0,0,0.8);
+    font-size: 20px;
+    padding-left: 10px;
+    border-right:0px;
+}
+
+#typeButtons_submit{
+    height: 85%;
+    width: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #a6a6a6;
+    border-radius: 1vmin;
+    margin-right: 2vmin;
+    border-left: 5px outset #c1c1c1;
+}
+#trending{
+    background-color: transparent;
+    border: 0px;
+    font-size: 13px;
+    height: 100%;
+    cursor: pointer;
+}
+#trending:hover{
+    background-color: #a6a6a6;
+}
+
+
+.dropdown-content .unclickable{
+    color:#ccc !important;
+    background-color: #a6a6a6 !important;
+    cursor: default;
+    text-shadow: -1px -1px 2px #333, 1px -1px 2px #333,
+    -1px 1px 1px #ccc, 1px 1px 1px #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+.gifWindow{
+    position: absolute;
+    width: 320px;
+    height: 30px;
+    background-color: #c1c1c1;
+    top:50%;
+    left: 25%;
+    border:5px ridge #dfdfdf;
+    box-shadow: 0px 8px 16px 5px rgba(0,0,0,0.2);
+}
+.gifWindow_topNav{
+    width: 100%;
+    height: 30px;
+    background-color: #656565;
+    display: flex;
+}
+
+.gif_Top{
+    background-color: #656565;
+    width: 100%;
+    color: #ccc;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
+    text-align: left;
+    border: 0px solid transparent;
+}
+.gif_Top:active, .gif_Top_Active{
+    background-color: #000283;
+    color: #fff;
+}
+.gif_close {
+    width: 26px;
+    height: 26px;
+    background-color: #ccc;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 2px;
+    margin-top: 2px;
+}
+.gif_close .gif_Top{
+    background-color: #000283;
+}
+
+.gifButton{
+    background-color: transparent;
+    width: 100%;
+    height: calc(100% - 30px);
+    border: 0px;
+}
+.gifRating{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000,
+    -1px 1px 1px #000, 1px 1px 1px #000;
+    opacity: 0.8;
+}
+
+.text-about{
+    font-size: 20px;
+}
